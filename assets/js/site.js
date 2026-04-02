@@ -67,10 +67,11 @@ const audienceMap = {
   governed: "Governed Workflow Review",
 };
 
-const configuredFormApiUrl = "__FORM_API_URL__";
+const formApiUrlPlaceholder = "__FORM_API_URL__";
+const configuredFormApiUrl = __FORM_API_URL_JSON__;
 
 function resolveFormApiBaseUrl() {
-  if (configuredFormApiUrl && configuredFormApiUrl !== "__FORM_API_URL__") {
+  if (configuredFormApiUrl && configuredFormApiUrl !== formApiUrlPlaceholder) {
     return configuredFormApiUrl.replace(/\/$/, "");
   }
 

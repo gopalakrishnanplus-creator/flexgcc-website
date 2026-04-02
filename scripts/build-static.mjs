@@ -27,7 +27,10 @@ fs.mkdirSync(distDir, { recursive: true });
 fs.cpSync(assetDir, path.join(distDir, "assets"), { recursive: true });
 
 const sourceSiteJs = fs.readFileSync(scriptPath, "utf8");
-const builtSiteJs = sourceSiteJs.replaceAll("__FORM_API_URL__", formApiUrl);
+const builtSiteJs = sourceSiteJs.replace(
+  "__FORM_API_URL_JSON__",
+  JSON.stringify(formApiUrl || "__FORM_API_URL__"),
+);
 fs.writeFileSync(path.join(distDir, "assets", "js", "site.js"), builtSiteJs);
 
 for (const filename of staticPages) {
