@@ -21,11 +21,9 @@ For the contact form API, run:
 ```bash
 cd server
 npm install
-SMTP_HOST=your-smtp-host \
-SMTP_PORT=587 \
-SMTP_USER=your-smtp-user \
-SMTP_PASS=your-smtp-password \
-SMTP_FROM=website@flexgcc.com \
+SENDGRID_API_KEY=your-sendgrid-api-key \
+SENDGRID_FROM_EMAIL=website@flexgcc.com \
+SENDGRID_FROM_NAME=FlexGCC \
 ALLOWED_ORIGINS=http://localhost:4173 \
 node server.mjs
 ```

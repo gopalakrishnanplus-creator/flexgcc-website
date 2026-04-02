@@ -25,6 +25,19 @@ app.use(
 );
 
 function getTransport() {
+  const sendgridApiKey = process.env.SENDGRID_API_KEY;
+  if (sendgridApiKey) {
+    return nodemailer.createTransport({
+      host: "smtp.sendgrid.net",
+      port: 587,
+      secure: false,
+      auth: {
+        user: "apikey",
+        pass: sendgridApiKey,
+      },
+    });
+  }
+
   const host = process.env.SMTP_HOST;
   const portValue = Number(process.env.SMTP_PORT || "587");
   const user = process.env.SMTP_USER;
@@ -109,7 +122,10 @@ app.post("/api/contact", async (req, res) => {
 
   try {
     await transport.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+      from:
+        process.env.SENDGRID_FROM_NAME && process.env.SENDGRID_FROM_EMAIL
+          ? `"${process.env.SENDGRID_FROM_NAME}" <${process.env.SENDGRID_FROM_EMAIL}>`
+          : process.env.SENDGRID_FROM_EMAIL || process.env.SMTP_FROM || process.env.SMTP_USER,
       to: "sunit.gala@flexgcc.com",
       cc: "kandarp.soni@flexgcc.com",
       replyTo: payload.email,

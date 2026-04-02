@@ -11,6 +11,12 @@ services:
     envVars:
       - key: ALLOWED_ORIGINS
         sync: false
+      - key: SENDGRID_API_KEY
+        sync: false
+      - key: SENDGRID_FROM_EMAIL
+        sync: false
+      - key: SENDGRID_FROM_NAME
+        sync: false
       - key: SMTP_HOST
         sync: false
       - key: SMTP_PORT
