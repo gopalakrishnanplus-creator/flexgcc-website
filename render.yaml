@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: flexgcc-form-api
+    runtime: node
+    rootDir: server
+    plan: starter
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm run start
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+  - type: static_site
+    name: flexgcc-site
+    buildCommand: npm run build
+    publishPath: dist
+    envVars:
+      - key: FORM_API_URL
+        sync: false
