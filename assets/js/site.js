@@ -183,7 +183,7 @@ function bindContactForm() {
 
     if (!apiBaseUrl) {
       if (error) {
-        error.textContent = "Form delivery is not configured yet. Please email sunit.gala@flexgcc.com directly.";
+        error.textContent = "Form delivery is not configured yet. Please email contact@flexgcc.com directly.";
         error.classList.add("is-visible");
       }
       return;
