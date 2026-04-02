@@ -2,7 +2,9 @@ const navTemplate = `
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="FlexGCC home">
-        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__mark" aria-hidden="true">
+          <img class="brand__logo" src="assets/img/flexgcc-logo.png" alt="" />
+        </span>
         <span class="brand__text">
           <span class="brand__name">FlexGCC</span>
           <span class="brand__tag">Founder-led workflow improvement</span>
@@ -45,6 +47,9 @@ const footerTemplate = `
     <div class="container">
       <div class="site-footer__panel">
         <div class="stack">
+          <div class="footer-brand">
+            <img class="footer-brand__logo" src="assets/img/flexgcc-logo.png" alt="FlexGCC logo" />
+          </div>
           <p class="eyebrow">FlexGCC</p>
           <h2 class="footer-title">Founder-led workflow improvement for companies that need real operational wins, fast.</h2>
           <p>Book a 20-Minute Workflow Review or email <a href="mailto:contact@flexgcc.com">contact@flexgcc.com</a>.</p>

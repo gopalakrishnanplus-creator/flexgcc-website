@@ -128,7 +128,7 @@ app.post("/api/contact", async (req, res) => {
           : process.env.SENDGRID_FROM_EMAIL || process.env.SMTP_FROM || process.env.SMTP_USER,
       to: "contact@flexgcc.com",
       cc: payload.email,
-      replyTo: payload.email,
+      replyTo: "contact@flexgcc.com",
       subject,
       text,
     });
