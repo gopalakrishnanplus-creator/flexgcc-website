@@ -1362,6 +1362,29 @@ textarea {
   color: #fff8ee;
 }
 
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-button {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f6feff;
+}
+
+.footer-button:hover,
+.footer-button:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.footer-note {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -1469,6 +1492,63 @@ textarea {
 .hero-simple__art {
   justify-self: end;
   width: min(100%, 360px);
+}
+
+.legal-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.legal-meta {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-meta .mini-card {
+  padding: 1.15rem;
+}
+
+.legal-prose {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.legal-prose section {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.legal-prose h2,
+.legal-prose h3 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.legal-prose h2 {
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+}
+
+.legal-prose h3 {
+  font-size: 1.05rem;
+}
+
+.legal-prose p,
+.legal-prose li {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.legal-prose ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.legal-prose li + li {
+  margin-top: 0.45rem;
 }
 
 .stats-band {
