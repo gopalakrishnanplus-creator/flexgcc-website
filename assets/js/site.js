@@ -53,6 +53,11 @@ const footerTemplate = `
           <p class="eyebrow">FlexGCC</p>
           <h2 class="footer-title">Founder-led workflow improvement for companies that need real operational wins, fast.</h2>
           <p>Book a 20-Minute Workflow Review or email <a href="mailto:contact@flexgcc.com">contact@flexgcc.com</a>.</p>
+          <div class="footer-actions">
+            <a class="button button--secondary footer-button" href="terms.html">Terms of Use</a>
+            <a class="button button--secondary footer-button" href="privacy.html">Privacy Policy</a>
+          </div>
+          <p class="footer-note">© FlexGCC. All rights reserved.</p>
         </div>
         <div class="footer-links">
           <a href="index.html">Home</a>
@@ -60,6 +65,8 @@ const footerTemplate = `
           <a href="who-we-help.html">Who We Help</a>
           <a href="team.html">Team</a>
           <a href="contact.html">Contact</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="privacy.html">Privacy Policy</a>
         </div>
       </div>
     </div>
