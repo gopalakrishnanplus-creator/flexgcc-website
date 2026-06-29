@@ -17,6 +17,8 @@ const staticPages = [
   "kandarp.html",
   "sunit.html",
   "contact.html",
+  "terms.html",
+  "privacy.html",
   "favicon.ico",
 ];
 
